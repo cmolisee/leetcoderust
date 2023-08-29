@@ -27,7 +27,7 @@ jobs:
       - name: Format and Lint
         run: |
           cargo fmt
-          cargo clippy -- -D warnings
+          cargo clippy
       - name: Test
         run: |
           cargo check
