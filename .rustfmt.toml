@@ -1,1 +1,2 @@
-format_code_in_doc_comments = true
+# unstable feature - must enable nightly build
+# format_code_in_doc_comments = true
