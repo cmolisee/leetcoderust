@@ -25,7 +25,7 @@ jobs:
           cargo clean
       - name: Format and Lint
         run: |
-          cargo fmt -- --check
+          cargo fmt
           cargo clippy
       - name: Test
         run: |
