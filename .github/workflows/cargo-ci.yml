@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+# Make sure CI fails on all warnings, including Clippy lints
+env:
+  RUSTFLAGS: "-Dwarnings"
+
 jobs:
   cargo-ci:
     runs-on: ubuntu-latest
