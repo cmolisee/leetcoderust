@@ -24,6 +24,9 @@ jobs:
           cargo --version --verbose
           rustc --version
           cargo clippy --version
+      - name: Generate Docs
+        run: |
+          cargo doc
       - name: Format and Lint
         run: |
           cargo fmt -- --check
@@ -35,6 +38,3 @@ jobs:
       - name: Build
         run: |
           cargo build --release
-      - name: Generate Docs
-        run: |
-          cargo doc
