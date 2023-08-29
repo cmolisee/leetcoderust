@@ -35,3 +35,6 @@ jobs:
       - name: Build
         run: |
           cargo build --release
+      - name: Generate Docs
+        run: |
+          cargo doc
