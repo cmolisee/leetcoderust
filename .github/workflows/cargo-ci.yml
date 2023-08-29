@@ -20,10 +20,13 @@ jobs:
           cargo --version --verbose
           rustc --version
           cargo clippy --version
+      - name: Generate Docs
+        run: |
+          cargo doc
       - name: Format and Lint
         run: |
-          cargo fmt
-          cargo clippy
+          cargo fmt -- --check
+          cargo clippy -- -D warnings
       - name: Test
         run: |
           cargo check
